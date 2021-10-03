@@ -1,7 +1,7 @@
-/*	Author: lab
+/*	Author: Cindy Do
  *  Partner(s) Name: 
- *	Lab Section:
- *	Assignment: Lab #  Exercise #
+ *	Lab Section: 23
+ *	Assignment: Lab #2  Exercise #
  *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example
@@ -14,9 +14,14 @@
 
 int main(void) {
     /* Insert DDR and PORT initializations */
+	DDRA = 0x00; PORTA = 0xFF;
+	DDRB = 0xFF; PORTB = 0x00;
 
+	unsigned char temp_input = 0x00;
     /* Insert your solution below */
     while (1) {
+	temp_input = PINA;
+	PORTB = temp_input;
 
     }
     return 1;
