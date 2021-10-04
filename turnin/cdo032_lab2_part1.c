@@ -22,10 +22,10 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
 	// 1) Read input
-        tmpA = PINA & 0x01; //a0
-	tmpB = PINA & 0x02; //a1
+        tmpA = PINA & 0x01;
+	tmpB = PINA & 0x02;
         
-        if (tmpA == 0x00 && tmpB == 0x01) {
+        if (tmpA == 0x01 && tmpB == 0x00) {
             PORTB = 0x01;
         }
        	else {
