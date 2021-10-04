@@ -39,7 +39,7 @@ int main(void) {
             cntavail = 0x01; //1 avail.
         }
         if (tmpA == 0xF) {
-            cntavail = 0x00; //0 avail.
+            cntavail = 0x80; //0 avail.
         }	
 
 	    PORTC = cntavail;
