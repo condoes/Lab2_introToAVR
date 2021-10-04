@@ -18,11 +18,12 @@ int main(void) {
 	DDRB = 0xFF; PORTB = 0x00;
 
 	unsigned char cntavail = 0x00;
+	unsigned char tmpA = 0x00;
 	
 
     /* Insert your solution below */
     while (1) {
-        tmpA = PINA & 0x0; //a0
+        tmpA = PINA; //a0
         
         if (tmpA == 0x00) { //all avail.
             cntavail = 0x04;
