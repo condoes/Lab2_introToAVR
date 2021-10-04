@@ -26,10 +26,10 @@ int main(void) {
 	tmpB = PINA & 0x02; //a1
         
         if (tmpA == 0x00 && tmpB == 0x01) {
-            PORTB = 0x01
+            PORTB = 0x01;
         }
        	else {
-            PORTB = 0x00
+            PORTB = 0x00;
         } 
 
     }
