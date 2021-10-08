@@ -19,10 +19,11 @@ int main(void) {
     DDRC = 0x00; PORTC = 0xFF;
     DDRD = 0xFF; PORTD = 0x00;
 
-	unsigned char total_weight = 0;
-    unsigned char tmpA = 0;
-    unsigned char tmpB = 0;
-    unsigned char tmpC = 0;
+	unsigned char total_weight = 0x0;
+    unsigned char tmpA = 0x0;
+    unsigned char tmpB = 0x0;
+    unsigned char tmpC = 0x0;
+    unsigned char tmpD = 0x0;
 	
 
     /* Insert your solution below */
@@ -33,13 +34,13 @@ int main(void) {
         total_weight = tmpA + tmpB + tmpC;
 
         if(total_weight > 0x8C) {
-            PORTD = PORTD | 0x1;
+            tmpD = 0x1;
         }
         if((tmpA - tmpC) > 0x50 || (tmpC - tmpA) > 0x50) {
-            PORTD = PORTD | 0x2;
+            tmpD = tmpD | 0x2;
         }
 
-        PORTD = (total_weight & 0xFC) | PORTD;
+        PORTD = (total_weight & 0x0FC) | tmpD;
 
         
     }
