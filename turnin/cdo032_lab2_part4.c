@@ -23,7 +23,6 @@ int main(void) {
     unsigned char tmpA = 0x0;
     unsigned char tmpB = 0x0;
     unsigned char tmpC = 0x0;
-    unsigned char tmpD = 0x0;
 	
 
     /* Insert your solution below */
@@ -34,10 +33,10 @@ int main(void) {
         total_weight = tmpA + tmpB + tmpC;
 
         if(total_weight > 0x8C) {
-            tmpD = 0x1;
+            PORTD = PORTD | 0x1;
         }
         if((tmpA - tmpC) > 0x50 || (tmpC - tmpA) > 0x50) {
-            tmpD = tmpD | 0x2;
+            PORTD = PORTD | 0x2;
         }
 
         if(total_weight > 0x0F) {
@@ -48,7 +47,7 @@ int main(void) {
         }
 
 
-        PORTD = total_weight| tmpD;
+        PORTD = total_weight| PORTD;
 
         
     }
