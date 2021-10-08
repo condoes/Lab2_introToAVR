@@ -35,7 +35,7 @@ int main(void) {
         if(total_weight > 0x8C) {
             PORTD = PORTD | 0x1;
         }
-        if((tmpA - tmpC) > 0x50) {
+        if((tmpA - tmpC) > 0x50 || (tmpC - tmpA) > 0x50) {
             PORTD = PORTD | 0x2;
         }
 
