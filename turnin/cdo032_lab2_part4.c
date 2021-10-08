@@ -15,7 +15,7 @@
 int main(void) {
     /* Insert DDR and PORT initializations */
 	DDRA = 0x00; PORTA = 0xFF;
-    DDRB = 0x00; PORTC = 0xFF;
+    DDRB = 0x00; PORTB = 0xFF;
     DDRC = 0x00; PORTC = 0xFF;
     DDRD = 0xFF; PORTD = 0x00;
 
