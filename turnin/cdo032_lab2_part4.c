@@ -32,7 +32,7 @@ int main(void) {
         tmpA = PINA; tmpB = PINB; tmpC = PINC;
         total_weight = tmpA + tmpB + tmpC;
 
-        if(weight > 0x8C) {
+        if(total_weight > 0x8C) {
             PORTD = PORTD | 0x1;
         }
         if((tmpA - tmpC) > 0x50) {
