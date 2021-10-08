@@ -40,8 +40,15 @@ int main(void) {
             tmpD = tmpD | 0x2;
         }
 
+        if(total_weight > 0x0F) {
+            total_weight = total_weight >> 2;
+        }
+        else {
+            total_weight = total_weight << 2;
+        }
 
-        PORTD = ((total_weight & 0x0FC)) >> 2 | tmpD;
+
+        PORTD = (total_weight & 0x0FC) | tmpD;
 
         
     }
