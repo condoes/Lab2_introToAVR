@@ -40,7 +40,8 @@ int main(void) {
             tmpD = tmpD | 0x2;
         }
 
-        PORTD = (total_weight & 0x0FC) | tmpD;
+
+        PORTD = ((total_weight & 0x0FC)) >> 2 | tmpD;
 
         
     }
